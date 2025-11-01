@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NEGM APPAREL — Redefined Essentials</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+    :root {
+      --bg: #ffffff;
+      --fg: #0a0a0a;
+      --muted: #777;
+      --accent: #000;
+      --max-width: 1200px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px 0;
+    }
+    header h1 {
+      letter-spacing: 6px;
+      font-weight: 700;
+    }
+    header p {
+      letter-spacing: 4px;
+      font-size: 14px;
+      margin-top: 8px;
+      color: var(--muted);
+    }
+    .hero {
+      position: relative;
+      max-width: var(--max-width);
+      margin: 40px auto;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .hero video {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
+    .overlay h2 {
+      font-weight: 700;
+      letter-spacing: 8px;
+      font-size: 28px;
+      margin: 0;
+    }
+    .overlay span {
+      font-size: 12px;
+      letter-spacing: 6px;
+      color: var(--fg);
+    }
+    #shop {
+      max-width: var(--max-width);
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+    #products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+      gap: 28px;
+    }
+    .product {
+      border: 1px solid #eee;
+      border-radius: 6px;
+      overflow: hidden;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .product:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .product img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      display: block;
+    }
+    .meta {
+      padding: 16px;
+    }
+    .meta h3 {
+      font-weight: 600;
+      margin: 0 0 4px;
+      letter-spacing: 1px;
+    }
+    .meta p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+    button.buy {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid var(--accent);
+      background: transparent;
+      letter-spacing: 2px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .3s ease;
+    }
+    button.buy:hover {
+      background: var(--accent);
+      color: #fff;
+    }
+    #checkout {
+      display: none;
+      max-width: 480px;
+      margin: 60px auto;
+      padding: 20px;
+      border-top: 1px solid #eee;
+    }
+    #checkout h3 {
+      text-align: center;
+      letter-spacing: 3px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-family: inherit;
+      font-size: 14px;
+    }
+    button.submit {
+      padding: 12px;
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 40px 10px;
+      font-size: 13px;
+      color: var(--muted);
+      border-top: 1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>NEGM APPAREL</h1>
+    <p>REDEFINED ESSENTIALS</p>
+  </header>
+
+  <section class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-fashion-show-cut-747.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h2>NEGM APPAREL</h2>
+      <span>REDEFINED ESSENTIALS</span>
+    </div>
+  </section>
+
+  <section id="shop">
+    <div id="products">
+      <div class="product" data-name="Essential Tee" data-price="45">
+        <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1200" alt="Essential Tee">
+        <div class="meta">
+          <h3>Essential Tee</h3>
+          <p>$45</p>
+          <button class="buy">BUY NOW</button>
+        </div>
+      </div>
+      <div class="product" data-name="Structured Hoodie" data-price="120">
+        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=1200" alt="Structured Hoodie">
+        <div class="meta">
+          <h3>Structured Hoodie</h3>
+          <p>$120</p>
+          <button class="buy">BUY NOW</button>
+        </div>
+      </div>
+      <div class="product" data-name="Minimal Cargo Pants" data-price="95">
+        <img src="https://images.unsplash.com/photo-1585386959984-a415522b0e9b?q=80&w=1200" alt="Cargo Pants">
+        <div class="meta">
+          <h3>Minimal Cargo Pants</h3>
+          <p>$95</p>
+          <button class="buy">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="checkout">
+    <h3>Cash on Delivery</h3>
+    <form id="orderForm">
+      <input type="text" id="fullname" placeholder="Full Name" required>
+      <input type="tel" id="phone" placeholder="Phone Number" required>
+      <input type="text" id="address" placeholder="Full Address" required>
+      <input type="text" id="product" readonly>
+      <textarea id="notes" placeholder="Notes (optional)"></textarea>
+      <button type="submit" class="submit">CONFIRM ORDER</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 NEGM APPAREL — All Rights Reserved<br>
+    Contact: <a href="mailto:negmapparel@gmail.com">negmapparel@gmail.com</a> · @negmapparel
+  </footer>
+
+  <script>
+    const checkout = document.getElementById('checkout');
+    const form = document.getElementById('orderForm');
+    const productInput = document.getElementById('product');
+
+    document.querySelectorAll('.buy').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const product = e.target.closest('.product');
+        productInput.value = product.dataset.name + ' — $' + product.dataset.price;
+        checkout.scrollIntoView({ behavior: 'smooth' });
+        checkout.style.display = 'block';
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        name: form.fullname.value,
+        phone: form.phone.value,
+        address: form.address.value,
+        product: form.product.value,
+        notes: form.notes.value
+      };
+      const mailto = `mailto:negmapparel@gmail.com?subject=New Order: ${encodeURIComponent(data.product)}&body=` +
+        encodeURIComponent(`Name: ${data.name}
+Phone: ${data.phone}
+Address: ${data.address}
+Product: ${data.product}
+Notes: ${data.notes}`);
+      window.location.href = mailto;
+      alert('Order form opened in your email app.');
+    });
+  </script>
+</body>
+</html>
